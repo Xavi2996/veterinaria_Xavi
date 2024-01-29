@@ -1,0 +1,22 @@
+button{
+  color: #43B2B5;
+  font-family: 'Montserrat-Bold';
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.btn-color:hover {
+  background-color: #92D0D2;
+  color: #43B2B5;
+  /* Color de fondo al pasar el mouse sobre el botón */
+}
+
+.active {
+  background-color: #43B2B5;
+  color: white;
+}
+
+.active:hover {
+  background-color: #43B2B5;
+  color: white;
+}
