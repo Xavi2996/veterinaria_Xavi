@@ -6,6 +6,7 @@
 }
 .cont-bg-somos{
   background-color: #E4B50C;
+  padding: 40px 20px;
 }
 
 .img-somos{
@@ -28,6 +29,9 @@
   background-color: white;
   border-radius: 15px;
   font-weight: 700;
+  font-family: 'Refsan', fallback, sans-serif;
+  font-size: 1.2rem;
+  box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.3)
 }
 
 .text-p{
@@ -37,7 +41,6 @@
 @media (max-width: 1250px) {
 .cont-somos {
     max-width: 100%;
-
   }
 }
 
@@ -57,21 +60,25 @@
 
 /* servicios */
 .cont-bg-services{
-  background-color: #515151;
+  background-color: #f4f4f4;
 }
 
 .services{
-  display: flex;
+  display: flex;;
   justify-content: center;
+  flex-wrap: wrap;
+  max-width: 100%;
+  width: 100%;
 }
 .subtitle{
   color: #43B2B5;
-  font-weight: 700;
+  font-weight: 900;
+  font-size: 2.3rem;
 }
 .cont-services{
   max-width: 95%;
   width: 95%;
-  margin: 0 auto;
+  padding: 1.5rem;
 }
 
 .tarjeta {
@@ -82,6 +89,7 @@
   /* box-shadow: 2px 2px 8px 4px #d3d3d3d1; */
   border-radius: 15px;
   background: #92D0D2;
+  margin-top: 13px;
 }
 
 .cuerpo{}
@@ -102,4 +110,26 @@
   width: 200px;
 }
 
+@media (max-width: 480px) {
+.cont-services {
+    max-width: 100%;
+    padding: 0.5rem;
+  }
+}
+
+/* TIENDA */
+.tienda{
+  margin-top: 3rem;
+}
+
+.mejores-prod{
+  color: #43B2B5;
+  font-size: 1.5rem;
+}
+
+.tienda-linea{
+  color: #E4B50C;
+  font-size: 1.3rem;
+
+}
 
