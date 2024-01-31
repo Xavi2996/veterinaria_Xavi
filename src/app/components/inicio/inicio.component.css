@@ -141,6 +141,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
 }
 
 :host ::ng-deep {
@@ -205,8 +206,84 @@
   display: none !important;
 }
 
+:host ::ng-deep .p-carousel-item{
+  display: flex !important;
+  justify-content: center !important;
+}
+
 :host ::ng-deep .card-container .p-carousel .p-carousel-next,
-:host ::ng-deep .card-container .p-carousel .p-carousel-prev {
+::ng-deep .card-container .p-carousel .p-carousel-prev {
   color: #43B2B5;
-  /* Change to your desired color */
+}
+
+:host ::ng-deep .p-carousel .p-carousel-next svg,
+:host ::ng-deep .p-carousel .p-carousel-prev svg {
+  width: 40px;
+  /* Cambia al tamaño deseado */
+  height: 40px;
+  /* Cambia al tamaño deseado */
+}
+
+/* TESTIMONIALS */
+
+.cont-bg-testimonios {
+  position: relative;
+}
+
+.cont-bg-testimonios::before{
+  content: "";
+  background-image: url('../../../assets/images/interior-clinica-veterinaria.jpg');
+  background-size: cover;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 1);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  height: 30rem;
+}
+
+.cont-testimonios{
+  padding: 3rem 12rem;
+}
+
+.card-test {
+  padding: 1.5rem 3rem;
+
+}
+
+:host ::ng-deep .cont-testimonios .p-carousel .p-carousel-next,
+::ng-deep .cont-testimonios .p-carousel .p-carousel-prev {
+  color: #92D0D2;
+}
+
+:host ::ng-deep .p-carousel .p-carousel-indicators .p-carousel-indicator button {
+  background-color: #92D0D2;
+  /* Cambia a tu color deseado */
+}
+:host ::ng-deep .p-carousel .p-carousel-indicators .p-carousel-indicator.p-highlight button {
+  background-color: #ced4da;
+  /* Cambia a tu color deseado */
+}
+
+@media (max-width: 480px) {
+.cont-testimonios {
+    padding: 3rem 0;
+  }
+.cont-bg-testimonios::before {
+  height: 80vh;
+  width: 100%
+}
+.card-test {
+  padding: 1rem;
+
+}
+}
+
+@media (max-width: 780px) {
+  .cont-testimonios {
+    padding: 3rem 0;
+  }
+
 }

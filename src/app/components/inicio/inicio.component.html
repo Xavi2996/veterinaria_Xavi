@@ -92,7 +92,7 @@
           <p-carousel
             [value]="products"
             [numVisible]="3"
-            [numScroll]="3"
+            [numScroll]="1"
             [circular]="false"
             [responsiveOptions]="responsiveOptions"
           >
@@ -125,6 +125,41 @@
             </ng-template>
           </p-carousel>
         </div>
+      </div>
+    </div>
+  </div>
+  <div class="cont-bg-testimonios">
+    <div class="cont-testimonios container">
+      <div>
+        <h2 class="text-center">TESTIMONIOS</h2>
+      </div>
+      <div>
+        <p class="text-center">
+          Sabemos que tu masco es parte de tu familia. Aquí te contamos algunas
+          historias de nuestros pacientes.
+        </p>
+      </div>
+      <div>
+        <p-carousel
+          [value]="testimonios"
+          [numVisible]="1"
+          [numScroll]="1"
+          [circular]="true"
+          [responsiveOptions]="responsiveOptionsTest"
+          [autoplayInterval]="5000"
+        >
+          <ng-template let-testimonio pTemplate="item">
+            <div
+              class="card m-2 text-center card-test"
+              style="border-radius: 25px"
+            >
+              <div>
+                <p>{{ testimonio.testimonial }}</p>
+                <p>{{ testimonio.user }}</p>
+              </div>
+            </div>
+          </ng-template>
+        </p-carousel>
       </div>
     </div>
   </div>

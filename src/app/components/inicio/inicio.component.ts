@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class InicioComponent {
   responsiveOptions: any[] | undefined;
+  responsiveOptionsTest: any[] | undefined;
 
   products: any = [
     {
@@ -31,6 +32,28 @@ export class InicioComponent {
       price: '23.50',
     },
   ];
+  testimonios: any = [
+    {
+      testimonial:
+        '"Estoy encantado con la atención de Tyguspet. Mi perro Max recibió cuidados excepcionales. El equipo es amable y profesional,brindando un servicio integral. Además, la tienda online"',
+      user: 'Juan, dueño de Max.',
+    },
+    {
+      testimonial:
+        '"¡Increíble experiencia en Tyguspet! El personal es amable y atento, y siempre se nota el amor y cuidado que tienen hacia los animales. Recomiendo Tyguspet a todos los amantes de los animales".',
+      user: 'Juan, dueño de Max.',
+    },
+    {
+      testimonial:
+        '"Gracias a Tyguspet por brindar atención veterinaria excepcional a mi mascota. Siempre me siento tranquilo sabiendo que mi amigo peludo está en buenas manos"',
+      user: 'Juan, dueño de Max.',
+    },
+    {
+      testimonial:
+        '"Tyguspet es más que una veterinaria, es una familia que se preocupa profundamente por la salud y el bienestar de nuestros animales. Confío plenamente en su experiencia y profesionalismo"',
+      user: 'Juan, dueño de Max.',
+    },
+  ];
   ngOnInit() {
     this.responsiveOptions = [
       {
@@ -41,6 +64,24 @@ export class InicioComponent {
       {
         breakpoint: '991px',
         numVisible: 2,
+        numScroll: 1,
+      },
+      {
+        breakpoint: '767px',
+        numVisible: 1,
+        numScroll: 1,
+      },
+    ];
+
+    this.responsiveOptionsTest = [
+      {
+        breakpoint: '1199px',
+        numVisible: 1,
+        numScroll: 1,
+      },
+      {
+        breakpoint: '991px',
+        numVisible: 1,
         numScroll: 1,
       },
       {
