@@ -40,7 +40,7 @@
           <div class="cuerpo">
             <img
               class="service-icon"
-              src="../../../assets/images/clinica.png"
+              src="/assets/images/clinica.png"
               alt="clnica"
             />
           </div>
@@ -52,7 +52,7 @@
           <div class="cuerpo">
             <img
               class="service-icon"
-              src="../../../assets/images//laboratorio.png"
+              src="/assets/images//laboratorio.png"
               alt="clnica"
             />
           </div>
@@ -64,7 +64,7 @@
           <div class="cuerpo">
             <img
               class="service-icon"
-              src="../../../assets/images/peluqueria.png"
+              src="/assets/images/peluqueria.png"
               alt="clnica"
             />
           </div>
@@ -76,7 +76,7 @@
           <div class="cuerpo">
             <img
               class="service-icon"
-              src="../../../assets/images/tienda.png"
+              src="/assets/images/tienda.png"
               alt="clnica"
             />
           </div>
@@ -88,6 +88,43 @@
       <div class="tienda">
         <h3 class="tienda-linea">TIENDA EN LÍNEA</h3>
         <H2 class="mejores-prod">NUESTROS MEJORES PRODUCTOS</H2>
+        <div class="card-container">
+          <p-carousel
+            [value]="products"
+            [numVisible]="3"
+            [numScroll]="3"
+            [circular]="false"
+            [responsiveOptions]="responsiveOptions"
+          >
+            <ng-template let-product pTemplate="item">
+              <div class="product-item">
+                <div class="product-item-content">
+                  <div
+                    class="mb-1"
+                    style="display: flex; justify-content: center"
+                  >
+                    <img
+                      [src]="product.image"
+                      [alt]="product.name"
+                      class="product-image"
+                    />
+                  </div>
+                  <div>
+                    <p class="mb-1 product-name">
+                      {{ product.name }}
+                    </p>
+                    <div class="d-flex">
+                      <p class="mt-0 mb-3 elemento" style="text-align: left">
+                        {{ "$" + product.price }}
+                      </p>
+                      <button class="boton-imagen"></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+          </p-carousel>
+        </div>
       </div>
     </div>
   </div>

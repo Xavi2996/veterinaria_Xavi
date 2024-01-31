@@ -79,6 +79,7 @@
   max-width: 95%;
   width: 95%;
   padding: 1.5rem;
+  margin: 0 auto;
 }
 
 .tarjeta {
@@ -133,3 +134,79 @@
 
 }
 
+
+/* Carousel */
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+:host ::ng-deep {
+  .product-item {
+    .product-item-content {
+      border-radius: 25px;
+      margin: .3rem;
+      text-align: center;
+      padding: 1rem ;
+      background-color: white;
+      width: 200px;
+      height: 340px;
+      position: relative;
+    }
+
+    .product-image {
+      width: 200PX;
+    }
+  }
+}
+
+@media (max-width: 780px) {
+  .card-container {
+      display: block;
+
+    }
+}
+
+.elemento {
+  position: absolute;
+  bottom: 5px;
+  left: 1rem;
+}
+
+.product-name{
+  color: #43B2B5;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.boton-imagen {
+  background-image: url('../../../assets/images/compras.png');
+  background-size: cover;
+  /* Esto hará que la imagen cubra todo el botón */
+  background-repeat: no-repeat;
+  /* Esto evitará que la imagen se repita */
+  width: 50px;
+  /* Define el ancho del botón */
+  height: 50px;
+  /* Define la altura del botón */
+  border: none;
+  border-radius: 10px;
+  /* Esto eliminará el borde del botón */
+  cursor: pointer;
+  /* Cambiará el cursor a un puntero cuando se pase sobre el botón */
+  position: absolute;
+  bottom: 10px;
+  right: 1rem;
+}
+
+:host ::ng-deep .card-container .p-carousel .p-carousel-indicators {
+  display: none !important;
+}
+
+:host ::ng-deep .card-container .p-carousel .p-carousel-next,
+:host ::ng-deep .card-container .p-carousel .p-carousel-prev {
+  color: #43B2B5;
+  /* Change to your desired color */
+}

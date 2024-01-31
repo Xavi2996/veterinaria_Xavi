@@ -9,6 +9,7 @@ import { ServiciosComponent } from './components/servicios/servicios.component';
 import { TiendaComponent } from './components/tienda/tienda.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { CarouselModule } from 'primeng/carousel';
 
 @NgModule({
   declarations: [
@@ -18,13 +19,10 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     ServiciosComponent,
     TiendaComponent,
     ContactoComponent,
-    NavbarComponent
+    NavbarComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, CarouselModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
